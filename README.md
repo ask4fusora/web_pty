@@ -1,6 +1,22 @@
 `wpty` (`web_pty`) is a cross-platform (currently `x86_64` Linux and `x86_64` Windows) web
 pseudo-terminal (PTY) and/or bridge.
 
+## What is special?
+
+`wpty` was built with Unix philosophy of _"Do one thing and do it well"_.
+
+`wpty` will tries to do its best in being a web PTY solution solely.
+
+Meaning it is designed **to become a dependency of an end-user application** that needs it.
+
+By itself, of course it can be used, but there will **not be** any built-in
+authentication/authorization, multiplexing, advanced UI, etc.
+
+That is why it can be so powerful and versatile, unlike the other web PTY tools that made themselves
+a **you-use-me-or-you-leave-me** full-blown application.
+
+## Cursory quick look
+
 It spawns a direct child process inside a native OS pseudo-terminal (`openpty` on Linux, `ConPTY` on
 Windows) and exposes that PTY over exactly one transport mode:
 

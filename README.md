@@ -15,6 +15,17 @@ Windows) and exposes that PTY over exactly one transport mode:
 **Note:** `--port` and `--stdio-rpc` are mutually exclusive: passing both fails fast at startup with
 exit code `1`.
 
+## Showcases
+
+Both has near 100% (improving toward 100% soon) signals and bytes forwarded to child process
+verbatim. Meaning `ctrl-c` and `tab` works.
+
+1. `wpty` used standalone for temporary PTY sharing. `wpty --port 3000 --cmd 'nu'`
+   ![`wpty` used alone](./docs/assets/wpty_standalone.png)
+
+2. `wpty` used as a dependency for a game console app. `wpty --stdio-rpc --cmd 'java -jar
+   server.jar'` ![`wpty` used alone](./docs/assets/wpty_used_for_game_console.png)
+
 ## What this means? (See [design principles](#design-principles))
 
 You can simply think of `wpty` and its direct child process as a single process, as if there were no

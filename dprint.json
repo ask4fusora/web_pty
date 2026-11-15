@@ -1,0 +1,14 @@
+{
+  "json": {
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "markdown": {
+    "lineWidth": 100,
+    "textWrap": "always"
+  },
+  "plugins": [
+    "npm:@dprint/json@0.26.0",
+    "npm:@dprint/markdown@0.29.0"
+  ]
+}
